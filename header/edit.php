@@ -20,7 +20,7 @@
                 $email = $user_data['email'];
                 $telefone = $user_data['telefone'];
                 $senha = $user_data['senha'];
-                $genero = $user_data['genero'];
+                $genero = $user_data['sexo'];
                 $data_nasc = $user_data['data_nasc'];
                 $cep = $user_data['cep'];
                 $endereco = $user_data['endereco'];
@@ -46,6 +46,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/pratserv_logo.jpeg" type="image/x-icon">
     <link href="../assets/dist/css/cadstyle.css" rel="stylesheet">
     <title>Cadastro</title>
 </head>
@@ -81,13 +82,13 @@
                     <label for="senha" class="labelinput">Senha</label>
                 </div>
                 <p>Sexo:</p>
-                <input type="radio" id="feminino" name="genero" value="feminino" value="<?php echo ($genero == 'feminino') ? 'checked' : '' ?>" required>
+                <input type="radio" id="feminino" name="sexo" value="feminino" value="<?php echo ($genero == 'feminino') ? 'checked' : '' ?>" required>
                 <label for="feminino">Feminino</label>
                 <br>
-                <input type="radio" id="masculino" name="genero" value="masculino" value="<?php echo ($genero == 'masculino') ? 'checked' : '' ?>" required>
+                <input type="radio" id="masculino" name="sexo" value="masculino" value="<?php echo ($genero == 'masculino') ? 'checked' : '' ?>" required>
                 <label for="masculino">Masculino</label>
                 <br>
-                <input type="radio" id="outros" name="genero" value="outros" value="<?php echo ($genero == 'outros') ? 'checked' : '' ?>" required>
+                <input type="radio" id="outros" name="sexo" value="outros" value="<?php echo ($genero == 'outros') ? 'checked' : '' ?>" required>
                 <label for="outros">Outros</label>
                 <br><br>
                     <label for="data_nasc"><b>Data de Nascimento:</b></label>

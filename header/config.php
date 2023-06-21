@@ -2,7 +2,7 @@
 
     $dbHost = 'localhost:3308';
     $dbUsername = 'root';
-    $dbPassword = 'matrix23';
+    $dbPassword = 'Matrix317';
     $dbName = 'pratserv';
 
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -15,7 +15,5 @@
     //{
     //    echo "Conexão efetuada com sucesso";
     //}
-
     
-
 ?>

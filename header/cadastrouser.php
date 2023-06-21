@@ -10,15 +10,15 @@
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $senha = $_POST['senha'];
-        $genero = $_POST['genero'];
-        $data_nasc = $_POST['data_nascimento'];
+        $genero = $_POST['sexo'];
+        $data_nasc = $_POST['data_nasc'];
         $cep = $_POST['cep'];
         $endereco = $_POST['endereco'];
         $complemento = $_POST['complemento'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuario(cpf,nome,email,telefone,senha,genero,data_nasc,cep,endereco,complemento) VALUES ('$cpf','$nome','$email','$telefone','$senha','$genero','$data_nasc','$cep','$endereco','$complemento')");
+        $result = mysqli_query($conexao, "INSERT INTO usuario(cpf,nome,email,telefone,senha,sexo,data_nasc,cep,endereco,complemento) VALUES ('$cpf','$nome','$email','$telefone','$senha','$genero','$data_nasc','$cep','$endereco','$complemento')");
 
-        header('Location: login.php');
+        header('Location: inicio.php');
     }
 
 ?>
@@ -27,13 +27,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../assets/img/pratserv_logo.jpeg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/dist/css/cadstyle.css" rel="stylesheet">
     <title>Cadastro</title>
 </head>
 <body>
     <div class="box">
-        <form action="cadastro.php" method="POST">
+        <form action="cadastrouser.php" method="POST">
             <fieldset>
                 <legend><b>Cadastro de Usuário</b></legend>
                 <br>

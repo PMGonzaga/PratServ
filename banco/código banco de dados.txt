@@ -1,0 +1,84 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema pratserv
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema pratserv
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `pratserv` DEFAULT CHARACTER SET utf8mb3 ;
+USE `pratserv` ;
+
+-- -----------------------------------------------------
+-- Table `pratserv`.`funcionario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pratserv`.`funcionario` (
+  `cpf` INT NOT NULL,
+  `nome` VARCHAR(80) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
+  `senha` VARCHAR(12) NOT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
+  `sexo` CHAR(15) NOT NULL,
+  `data_nascimento` DATE NOT NULL,
+  `cpj` VARCHAR(17) NULL DEFAULT NULL,
+  PRIMARY KEY (`cpf`),
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `pratserv`.`usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pratserv`.`usuario` (
+  `cpf` INT NOT NULL,
+  `nome` VARCHAR(80) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `email` VARCHAR(150) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `senha` VARCHAR(12) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `telefone` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `sexo` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `data_nasc` DATE NOT NULL,
+  `cep` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `endereco` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `complemento` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  PRIMARY KEY (`cpf`),
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_unicode_ci;
+
+
+-- -----------------------------------------------------
+-- Table `pratserv`.`atendimento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pratserv`.`atendimento` (
+  `idatendimento` INT NOT NULL AUTO_INCREMENT,
+  `usuario_cpf` INT NOT NULL,
+  `funcionario_cpf` INT NOT NULL,
+  `data` DATE NOT NULL,
+  `valor` DECIMAL(10,2) NOT NULL,
+  `serviço` VARCHAR(80) NOT NULL,
+  PRIMARY KEY (`idatendimento`),
+  INDEX `fk_atendimento_usuario_idx` (`usuario_cpf` ASC) VISIBLE,
+  INDEX `fk_atendimento_funcionario1_idx` (`funcionario_cpf` ASC) VISIBLE,
+  CONSTRAINT `fk_atendimento_funcionario1`
+    FOREIGN KEY (`funcionario_cpf`)
+    REFERENCES `pratserv`.`funcionario` (`cpf`),
+  CONSTRAINT `fk_atendimento_usuario`
+    FOREIGN KEY (`usuario_cpf`)
+    REFERENCES `pratserv`.`usuario` (`cpf`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

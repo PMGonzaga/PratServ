@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../assets/img/pratserv_logo.jpeg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/dist/css/logstyle.css" rel="stylesheet">
     <title>Login</title>
@@ -16,7 +17,7 @@
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
-                <form action="testeLogin.php" method="post">
+                <form action="LoginTesteprest.php" method="post">
                 <div class="textfield">
                     <label for="email">Email</label>
                     <input type="email" name="email" placeholder="Email">
@@ -27,8 +28,8 @@
                 </div>
                 <input type="submit" class="btn-login" name="submit" value="Login">
                 </form>
-                <a href="cadastro.php"><button class="btn-login">Cadastrar</button></a>
-                <a href="../header/index.php"><button class="btn-login">Voltar</button></a>
+                <a href="cadastroprest.php"><button class="btn-login">Cadastrar</button></a>
+                <a href="../header/inicio.php"><button class="btn-login">Voltar</button></a>
             </div>
         </div>
     </div>
