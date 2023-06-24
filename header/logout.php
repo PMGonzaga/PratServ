@@ -3,5 +3,5 @@
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
     header('Location: inicio.php');
-    //Checar login referente ao usuário
+    //Checar login referente ao usuário e prestador
 ?>
