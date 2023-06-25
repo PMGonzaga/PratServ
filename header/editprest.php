@@ -51,7 +51,7 @@
 <body>
     <a href="crudprest.php">Voltar</a>
     <div class="box">
-        <form action="saveEdit.php" method="POST">
+        <form action="saveEditprest.php" method="POST">
             <fieldset>
                 <legend><b>Cadastro do Prestador</b></legend>
                 <br>

@@ -53,7 +53,7 @@
 <body>
     <a href="admin.php">Voltar</a>
     <div class="box">
-        <form action="saveEdit.php" method="POST">
+        <form action="saveEdituser.php" method="POST">
             <fieldset>
                 <legend><b>Cadastro de Usuário</b></legend>
                 <br>
