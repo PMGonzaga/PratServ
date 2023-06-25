@@ -11,14 +11,14 @@ if (!isset($_SESSION['email'])) {
 // Restante do código da página aqui
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" data-bs-theme="dark">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/img/pratserv_logo.jpeg" type="image/x-icon">
   <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <title>PratServ</title>
+  <title>Document</title>
 </head>
 <body>
 <header class="p-3 text-bg-dark">
@@ -49,14 +49,5 @@ if (!isset($_SESSION['email'])) {
       </div>
     </div>
   </header>
-  <div style="text-align: center; margin-top: 20px;">
-  <img src="../assets/img/pratserv_logo.jpeg" alt="Descrição da imagem" />
-    <h1 class="text-body-emphasis">PratServ</h1>
-    <p class="col-lg-8 mx-auto fs-5 text-muted">
-      Essa é a BETA do nosso sistema logo logo temos planos de implementar muito mais funções
-      em caso de feedback entre em contato conosco.
-    </p>
-    </div>
-  </div>
 </body>
 </html>

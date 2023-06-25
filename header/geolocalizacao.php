@@ -60,10 +60,10 @@ if (!isset($_SESSION['email'])) {
         </a>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="index.php" class="nav-link px-2 text-secondary">Inicio</a></li>
-          <li><a href="admin.php" class="nav-link px-2 text-white">Gerenciar</a></li>
+          <li><a href="cruduser.php" class="nav-link px-2 text-white">Usuários</a></li>
+          <li><a href="crudprest.php" class="nav-link px-2 text-white">Prestadores</a></li>
           <li><a href="geolocalizacao.php" class="nav-link px-2 text-white">Geolocalização</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="sobre.php" class="nav-link px-2 text-white">Sobre</a></li>
         </ul>
 
         <div class="dropdown text-end">
